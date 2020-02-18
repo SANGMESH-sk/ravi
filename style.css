@@ -1,29 +1,29 @@
 body{
-    background: linear-gradient(to right,purple,blue);
+    padding: 0;
+    margin: 0;
+    background: url("./snow-4666831__340.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: green;
 }
-template{
-    display: flex;
+.temp{
+    font-size: 100px;
+    color:red;
+    text-shadow: 1px 1px 1px;
 }
 .card{
-    width: 24%;
-    float: left;
-    margin: 5px;
+    background: transparent;
+    box-shadow: insert 1px 1px 39px 1px blueviolet;
 }
-h1{
-    font-size: 100px;
-    color: saddlebrown;
-    text-align: center;
-    font-weight: bold;
+.icon img{
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: -25px;
+    width: 157px;
+    color: crimson;
 }
-template{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    
-}
-
-p{
-    color:red;
-    font-size: 25px;
-    border-bottom: 1px solid rgb(238, 238, 238);
+.des{
+    font-size: 30px;
 }
