@@ -1,30 +1,16 @@
-window.SpeechRecognition = window.SpeechRecognition || 
-window.webkitSpeechRecognition;
+var arr = [
+  { name: "ajay", country: "india", age: "22" },
+  { name: "vijay", country: "india", age: "26" },
+  { name: "sujay", country: "india", age: "24" }
+];
+var template = document.querySelector("#templet");
 
-var recognition = new SpeechRecognition();
-
-var p = document.createElement('p');
-var words = document.getElementById('words');
-words.appendChild(p);
-console.log(words);
-
- recognition.addEventListener("result",(e)=>{
-     console.log(e.results);
-   var transcript=[...e.results]
-   .map(result => result[0])
-   .map(result => result.transcript).join("");//
-
-   if(e.results[0].isFinal) {
-       P = document.createElement("p");
-       words.appendChild(p);
-       p.innerHTML = transcript;
-   }
-   
-   
-   //console.log(transcript);
- });// this dom method listening any events
-
-
-
- recognition.addEventListener("end",recognition.start);
- recognition.start();//starting speech recognisation..
+for (var i = 0; i < arr.length; i++) {
+  var user = arr[i];
+  var clone = template.content.cloneNode(true);
+  var h1 = clone.querySelectorAll("h1");
+  h1[0].innerHTML = user.name;
+  var p = clone.querySelectorAll("p");
+  p[0].innerHTML = "country: " + user.country + "<br>age: " + user.age;
+  template.parentNode.appendChild(clone);
+}
